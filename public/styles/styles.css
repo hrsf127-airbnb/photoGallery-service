@@ -4,13 +4,14 @@
 }
 
 #gallery {
-  width: 90%;
+  width: 500%;
   margin: 0 auto;
 }
 
 .selected img {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
+    border-radius: 8px;
 }
 
 .slider-nav .slick-list img {
@@ -19,7 +20,7 @@
 }
 
 .modal-body {
-  padding: 5%;
+  padding: 8%;
 }
 
 .num-photos {
@@ -28,7 +29,8 @@
 }
 
 .main {
-  max-width: 300px;
+  max-width: 600px;
+  border-radius: 8px;
 }
 
 .description {
