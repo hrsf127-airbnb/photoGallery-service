@@ -1,38 +1,24 @@
+const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: path.join(__dirname, '/client/src/index.jsx'),
+  context: __dirname + '/client',
+  entry: './index.js',
+  devtool: 'eval-source-map',
   module: {
-    rules: [
+    loaders: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-react', '@babel/preset-env'],
-          },
-        },
-      },
-      {
-        test: /\.css$/,
-        loader: 'style-loader',
-      },
-      {
-        test: /\.css$/,
-        loader: 'css-loader',
-        options: {
-          modules: true,
-          localIdentName: '[name]__[local]___[hash:base64:5]',
+        loader: 'babel-loader',
+        query: {
+          presets: ['react', 'es2015', 'env']
         },
       },
     ],
   },
-  resolve: {
-    extensions: ['*', '.js', '.jsx', '.css'],
-  },
   output: {
-    filename: 'carousel.app.js',
-    path: path.join(__dirname, '/public'),
-  },
+    path: __dirname + '/public',
+    filename: 'app.js',
+  }
 };

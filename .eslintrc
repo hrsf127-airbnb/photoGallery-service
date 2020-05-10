@@ -1,0 +1,12 @@
+{
+  "extends": ["airbnb-standard"],
+  "rules": {
+    "import/extensions": ["js", "jsx"],
+    "max-len": ["error", { "code": 999 }],
+
+    "no-else-return": "off",
+    "react/jsx-closing-tag-location": "off",
+    "arrow-body-style": "off",
+    "react/prop-types": "off"
+  }
+}
