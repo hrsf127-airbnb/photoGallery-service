@@ -10,16 +10,16 @@ const photoGallery = require('../client/components/photo.jsx');
 const galleryMain = shallow(<img />);
 const galleryComponent = window.Gallery;
 const props = [
-  {
+ {
     id: 0,
-    url: 'http://res.cloudinary.com/hifromkevin/image/upload/v1519581545/s_surf.jpg',
-    description: 'Warning: you will not be as cool as this guy.'
+    url: 'https://hrsf127airbnbphotogallery.s3-us-west-1.amazonaws.com/1.jpg',
+    description: 'Brand new luxury house near high tech companies'
   },
   {
     id: 1,
-    url: 'http://res.cloudinary.com/hifromkevin/image/upload/v1519581545/s_surf2.jpg',
-    description: 'Our most popular package includes walking across the beach holding a surfboard.'
-  }
+    url: 'https://hrsf127airbnbphotogallery.s3-us-west-1.amazonaws.com/2.jpg',
+    description: 'Brand new luxury house near high tech companies'
+  },
   ];
 
 describe('Gallery', () => {
