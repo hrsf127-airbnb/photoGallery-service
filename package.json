@@ -1,7 +1,6 @@
 {
-  "name": "reviews",
+  "name": "photoGallery",
   "version": "1.0.0",
-  "description": "",
   "main": "bundle.js",
   "scripts": {
     "test": "jest --watch",
