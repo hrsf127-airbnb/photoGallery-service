@@ -44,6 +44,7 @@ From within the root directory:
 ```sh
 npm run build
 npm start
+npm run seed-database
 npm run test
 ```
 
