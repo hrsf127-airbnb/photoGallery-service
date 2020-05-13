@@ -1,24 +1,24 @@
-const webpack = require('webpack');
 const path = require('path');
 
+const SRC_DIR = path.join(__dirname, '/client/src/');
+const DIST_DIR = path.join(__dirname, '/public/');
+
 module.exports = {
-  context: __dirname + '/client',
-  entry: './index.js',
-  devtool: 'eval-source-map',
+  entry: `${SRC_DIR}/index.jsx`,
+  output: {
+    filename: 'bundle.js',
+    path: DIST_DIR,
+  },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
+        test: /\.jsx?/,
+        include: SRC_DIR,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015', 'env']
+          presets: ['@babel/react', '@babel/env'],
         },
       },
     ],
   },
-  output: {
-    path: __dirname + '/public',
-    filename: 'app.js',
-  }
 };
