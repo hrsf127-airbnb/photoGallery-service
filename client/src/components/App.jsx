@@ -3,7 +3,7 @@ import Axios from 'axios';
 import ImageGrid from './ImageGrid.jsx';
 import Carousel from './Carousel.jsx';
 
-class App extends React.Component {
+class PhotoGalleryApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   getAll() {
-    Axios.get('/photoGallery')
+    Axios.get('http://localhost:3009/photoGallery')
       .then((response) => {
         const ImgCollection = [];
         ImgCollection.push(response.data[0]);
@@ -68,4 +68,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default PhotoGalleryApp;
